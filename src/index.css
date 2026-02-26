@@ -1,0 +1,68 @@
+/* ─── Tailwind v4 entry point ──────────────────────────────────────────────── */
+@import "tailwindcss";
+
+/* ─── Google Fonts ─────────────────────────────────────────────────────────── */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap");
+
+/* ─── Custom design tokens (Tailwind v4 CSS-first config) ──────────────────── */
+@theme {
+  /* Government-Grade Palette */
+  --color-jnp-navy:    #0f172a;
+  --color-jnp-slate:   #1e293b;
+  --color-jnp-accent:  #2563eb;
+  --color-jnp-accent-light: #3b82f6;
+  --color-jnp-accent-dim:   #1d4ed8;
+  --color-jnp-muted:   #64748b;
+  --color-jnp-border:  #334155;
+  --color-jnp-glass:   rgba(30, 41, 59, 0.6);
+
+  /* Typography */
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+}
+
+/* ─── Base reset & global styles ───────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #0f172a;           /* jnp-navy */
+  color: #e2e8f0;                       /* slate-200 */
+  font-family: var(--font-sans);
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ─── Scrollbar styling ─────────────────────────────────────────────────────── */
+::-webkit-scrollbar       { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #0f172a; }
+::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #2563eb; }
+
+/* ─── Focus ring ────────────────────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+/* ─── Selection colour ──────────────────────────────────────────────────────── */
+::selection {
+  background-color: #2563eb33;
+  color: #e2e8f0;
+}
