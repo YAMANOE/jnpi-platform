@@ -2,7 +2,7 @@ import { mockTickets } from '../data/mockTickets'
 import HitlConsole from '../components/hitl/HitlConsole'
 import { ShieldCheck } from 'lucide-react'
 
-const hitlTickets = mockTickets.filter((t) => t.status === 'Pending HITL')
+const hitlTickets = mockTickets.filter((t) => t.status === 'Under Review')
 
 export default function HitlPage() {
     return (
